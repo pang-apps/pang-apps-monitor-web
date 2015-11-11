@@ -34,7 +34,7 @@ Declare your target url to monitor.
 ```bash
 #Web Monitor application reserved properties
 webmonitor.responseTime.devicename = response_time
-webmonitor.url = www.naver.com
+webmonitor.url = http://www.naver.com
 ``` 
 
 Note: User key can be found in your profile of Prever.io
