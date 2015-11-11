@@ -26,10 +26,17 @@ tar -xvf prever-apps-monitor-web.tar
 cd prever/conf
 
 Confgiure your account and user key in prever.properties.
-``` 
+```bash
 prever.username=your username in prever.io
 prever.userkey=your user key in prever.io
 ``` 
+Declare your target url to monitor.
+```bash
+#Web Monitor application reserved properties
+webmonitor.responseTime.devicename = response_time
+webmonitor.url = www.naver.com
+``` 
+
 Note: User key can be found in your profile of Prever.io
 ##### Step 4: Run #####
 ###### Windows ######
