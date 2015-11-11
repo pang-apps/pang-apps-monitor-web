@@ -19,7 +19,7 @@ Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/relea
 
 ###### Linux ######
 ``` 
-wget https://github.com/prever-apps/prever-apps-naver-top/releases/download/1.0/prever-apps-monitor-web.tar
+wget https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0/prever-apps-monitor-web.tar
 tar -xvf prever-apps-monitor-web.tar
 ``` 
 ##### Step 2: Configure your account #####
