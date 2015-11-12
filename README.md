@@ -57,4 +57,4 @@ Register the unregistered device.
 ##### Step 6: Happy to paly #####
 Wow!! all done. Enjoy and play with your device and your data.
 
-![alt tag](https://github.com/prever-apps/prever-apps-monitor-web/master/screen-shot.png)
+![alt tag](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png)
