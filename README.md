@@ -18,7 +18,7 @@ Very easy to install ^^.
 ##### Step 1 #####
 
 ###### Windows ######
-Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0/prever-apps-monitor-web.zip">zip</a> file and unzip it.
+Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0/prever-apps-monitor-web.zip">Prever web server monitoring application</a> file and unzip it.
 
 ###### Linux ######
 ``` 
