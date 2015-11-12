@@ -36,8 +36,15 @@ prever.userkey=your user key in prever.io
 Declare your target url to monitor.
 ```bash
 #Web Monitor application reserved properties
-webmonitor.responseTime.devicename = response_time
-webmonitor.url = http://www.naver.com
+#Add more url by index after 'webmonitor'
+webmonitor.1.url = https://www.google.com
+webmonitor.1.url.devicename = google_response_time
+webmonitor.2.url = http://www.naver.com
+webmonitor.2.url.devicename = naver_response_time
+webmonitor.3.url = http://www.yahoo.com
+webmonitor.3.url.devicename = yahoo_response_time
+webmonitor.4.url = http://www.alibaba.com/
+webmonitor.4.url.devicename = alibaba_response_time
 ``` 
 
 Note: User key can be found in your profile of Prever.io
