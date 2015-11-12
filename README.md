@@ -58,4 +58,3 @@ Register the unregistered device.
 Wow!! all done. Enjoy and play with your device and your data.
 
 <img src="https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png" width="400">
-![alt tag](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png)
