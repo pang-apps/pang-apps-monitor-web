@@ -13,7 +13,7 @@ eclipse {
 }
 
 ext {
-	preverVersion='0.0.1-SNAPSHOT'
+	preverVersion='1.0.0-SNAPSHOT'
 }
 
 configurations.all {
@@ -45,7 +45,7 @@ dependencies {
 	testCompile 'junit:junit:4.11'
 }
 
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0-SNAPSHOT'
 
 jar {
     manifest.attributes provider: 'prever.io'

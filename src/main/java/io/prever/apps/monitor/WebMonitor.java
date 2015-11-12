@@ -85,7 +85,7 @@ public class WebMonitor {
             }
 
             try {
-              TimeUnit.SECONDS.sleep(PreverProperties.getPeriod());
+              TimeUnit.MILLISECONDS.sleep(PreverProperties.getPeriod());
             } catch (InterruptedException e) {
             }
           }
