@@ -25,7 +25,7 @@ Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/relea
 wget https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0/prever-apps-monitor-web.tar
 tar -xvf prever-apps-monitor-web.tar
 ``` 
-##### Step 2: Configure your account #####
+##### Step 2: Configure prever.properties file #####
 cd prever/conf
 
 Confgiure your account and user key in prever.properties.
