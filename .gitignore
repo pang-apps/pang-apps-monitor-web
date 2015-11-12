@@ -17,3 +17,6 @@
 hs_err_pid*
 logs/prever.log
 prever/logs/prever.log
+prever-apps-monitor-web.tar
+prever-apps-monitor-web.zip
+prever-apps-monitor-web/logs/prever.log
