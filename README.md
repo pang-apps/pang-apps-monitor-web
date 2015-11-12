@@ -1,6 +1,9 @@
 # Monitor your web server's performance and play with Prever.io
 Every 10 seconds monitor access your target url and send response time. Just install this application and enjoy it in Prever.io
 
+## Screen shot
+<img src="https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png" width="400">
+
 ## Getting Started
 #### Sign up for Prever.io ####
 Before you begin, you need an Prever.io account. 
@@ -15,7 +18,7 @@ Very easy to install ^^.
 ##### Step 1 #####
 
 ###### Windows ######
-Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0/prever-apps-monitor-web.zip">zip</a> file and unzip it.
+Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0/prever-apps-monitor-web.zip">Prever web server monitoring application</a> file and unzip it.
 
 ###### Linux ######
 ``` 
@@ -33,8 +36,15 @@ prever.userkey=your user key in prever.io
 Declare your target url to monitor.
 ```bash
 #Web Monitor application reserved properties
-webmonitor.responseTime.devicename = response_time
-webmonitor.url = http://www.naver.com
+#Add more url by index after 'webmonitor'
+webmonitor.1.url = https://www.google.com
+webmonitor.1.url.devicename = google_response_time
+webmonitor.2.url = http://www.naver.com
+webmonitor.2.url.devicename = naver_response_time
+webmonitor.3.url = http://www.yahoo.com
+webmonitor.3.url.devicename = yahoo_response_time
+webmonitor.4.url = http://www.alibaba.com/
+webmonitor.4.url.devicename = alibaba_response_time
 ``` 
 
 Note: User key can be found in your profile of Prever.io
