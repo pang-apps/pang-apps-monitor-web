@@ -1,5 +1,7 @@
 # Monitor your web server's performance and play with Prever.io
 Every 10 seconds monitor access your target url and send response time. Just install this application and enjoy it in Prever.io
+
+## Screen shot
 <img src="https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png" width="400">
 
 ## Getting Started
