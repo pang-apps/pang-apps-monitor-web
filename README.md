@@ -48,7 +48,7 @@ webmonitor.4.url.devicename = alibaba_response_time
 ``` 
 
 Note: User key can be found in your profile of Prever.io
-##### Step 4: Run #####
+##### Step 3: Run #####
 ###### Windows ######
 ``` 
 prever/prever.bat
@@ -57,12 +57,12 @@ prever/prever.bat
 ``` 
 prever/./prever.sh
 ``` 
-##### Step 5: Access to prever.io #####
+##### Step 4: Access your devices #####
 Register your device in Prever.io
 
 Login your account.
 See main dashborad and you can find unregistered device.
 Register the unregistered device.
 
-##### Step 6: Happy to paly #####
+##### Step 5: You are happy to play with your data #####
 Wow!! all done. Enjoy and play with your device and your data.
