@@ -1,6 +1,6 @@
 # Monitor your web server's performance and play with Prever.io
 
-[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)])
+[License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
 Every 10 seconds monitor access your target url and send response time. Just install this application and enjoy it in Prever.io
 
