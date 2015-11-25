@@ -1,10 +1,12 @@
 # Monitor your web server's performance and play with Prever.io
-[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://npmjs.org/package/gulp-angular-templatecache)
+
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)])
+
 Every 10 seconds monitor access your target url and send response time. Just install this application and enjoy it in Prever.io
 
 ## Screen shot
 > Realtime monitoring
-<img src="https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png" width="400">
+![](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png)
 > Analysis
 <img src="https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot-2.png" width="400">
 ## Getting Started
