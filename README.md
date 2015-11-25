@@ -6,9 +6,10 @@ Every 10 seconds monitor access your target url and send response time. Just ins
 
 ## Screen shot
 > Realtime monitoring
-![](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png)
+<img src="https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png" width="400">
 > Analysis
 <img src="https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot-2.png" width="400">
+
 ## Getting Started
 #### Sign up for Prever.io ####
 Before you begin, you need an Prever.io account. 
