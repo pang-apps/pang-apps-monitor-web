@@ -26,7 +26,7 @@ wget https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.
 tar -xvf prever-apps-monitor-web.tar
 ``` 
 ##### Step 2: Configure prever.properties file #####
-cd prever/conf
+cd prever-apps-monitor-web/conf
 
 Confgiure your account and user key in prever.properties.
 ```bash
