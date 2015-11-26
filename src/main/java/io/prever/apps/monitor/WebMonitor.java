@@ -80,7 +80,7 @@ public class WebMonitor {
 
               data.put(target.get("devicename"), milliTime);
               prever.sendData(data);
-            } catch (Exception e) {
+            } catch (Throwable e) {
               logger.error("Monitor has an error", e);
             }
 
