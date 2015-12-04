@@ -27,6 +27,7 @@ import io.prever.sdk.util.PreverProperties;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -37,8 +38,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
@@ -47,24 +50,40 @@ import org.slf4j.LoggerFactory;
 public class WebMonitor {
   private static final Logger logger = LoggerFactory.getLogger(WebMonitor.class);
   private static boolean running = true;
+  private static int TIMEOUT_VALUE = 5000;
+  private static String tname = null;
 
   public static void main(String[] args) throws Exception {
-    //Prever must be initialized first to use prever.properties by PreverProperties
+    // Prever must be initialized first to use prever.properties by PreverProperties
     final Prever prever = new PreverHttp();
 
     Map<Integer, Map<String, String>> targets = extractTargets();
 
-    final ExecutorService threadPools = Executors.newFixedThreadPool(targets.size());
+    final ExecutorService threadPools = Executors.newFixedThreadPool(targets.size(), new ThreadFactory() {
+      
+      public Thread newThread(final Runnable r) {
+        Thread t = new Thread() {
+          public void run() {
+            r.run();
+          }
+        };
+        
+        t.setName(tname);
+        return t;
+      }
+    });
 
+ 
     Iterator<Entry<Integer, Map<String, String>>> iterator = targets.entrySet().iterator();
     while (iterator.hasNext()) {
       Entry<Integer, Map<String, String>> next = iterator.next();
       final Map<String, String> target = next.getValue();
+      tname = target.get("devicename");
       threadPools.execute(new Runnable() {
 
         public void run() {
 
-          while (running ) {
+          while (running) {
             // start timer
             long milliStart = System.currentTimeMillis();
 
@@ -94,10 +113,19 @@ public class WebMonitor {
         private void getResponse(String targetUrl) throws MalformedURLException, IOException {
           URL url = new URL(targetUrl);
           URLConnection conn = url.openConnection();
-          BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-          while (in.readLine() != null) {
+          conn.setConnectTimeout(TIMEOUT_VALUE);
+          conn.setReadTimeout(TIMEOUT_VALUE);
+          InputStream in = conn.getInputStream();
+
+          try {
+            byte[] buffer = new byte[1024];
+            int read = 0;
+            while ((read = in.read(buffer, 0, buffer.length)) != -1) {}
+          } finally {
+            if (in != null) {
+              in.close();
+            }
           }
-          in.close();
         }
 
       });
