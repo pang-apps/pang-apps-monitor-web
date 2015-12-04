@@ -1,6 +1,7 @@
 # Monitor your web server's performance and play with Prever.io
 
 Every 10 seconds monitor access your target url and send response time. Just install this application and enjoy it in Prever.io
+You can monitor using your mobile phone or tablet any devices.
 
 ## Screen shot
 ###### Realtime monitoring ######
