@@ -7,7 +7,7 @@
 	            <maxIndex>21</maxIndex>
             </rollingPolicy>
             <encoder>
-              <pattern>%d{HH:mm:ss.SSS} [%thread] %msg%n</pattern>
+              <pattern>%date [%thread] %msg%n</pattern>
             </encoder>
             <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
       			<maxFileSize>5MB</maxFileSize>
@@ -15,7 +15,7 @@
     </appender>
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 	    <encoder>
-	      <pattern>%d{HH:mm:ss.SSS} [%thread] %msg%n</pattern>
+	      <pattern>%date [%thread] %msg%n</pattern>
 	    </encoder>
   	</appender>
 
