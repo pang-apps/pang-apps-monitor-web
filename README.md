@@ -5,6 +5,7 @@ Every 10 seconds monitor access your target url and send response time. Just ins
 ## Screen shot
 ###### Realtime monitoring ######
 ![Realtime monitoring](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png "Realtime monitoring")
+![Realtime monitoring](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot-3.png "Realtime monitoring")
 
 ###### Analysis ######
 ![Analysis](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot-2.png "Analysis")
@@ -23,11 +24,11 @@ Very easy to install ^^.
 ##### Step 1 #####
 
 ###### Windows ######
-Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0.1/prever-apps-monitor-web.zip">Prever web server monitoring application</a> file and unzip it.
+Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.zip">Prever web server monitoring application</a> file and unzip it.
 
 ###### Linux ######
 ``` 
-wget https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0.1/prever-apps-monitor-web.tar
+wget https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.tar
 tar -xvf prever-apps-monitor-web.tar
 ``` 
 ##### Step 2: Configure prever.properties file #####
