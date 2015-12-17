@@ -25,11 +25,11 @@ Very easy to install ^^.
 ##### Step 1 #####
 
 ###### Windows ######
-Download a <a href="https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/pang-apps-monitor-web.zip">Pang Data web server monitoring application</a> file and unzip it.
+Download a <a href="https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.3/pang-apps-monitor-web.zip">Pang Data web server monitoring application</a> file and unzip it.
 
 ###### Linux ######
 ``` 
-wget https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/pang-apps-monitor-web.tar
+wget https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.3/pang-apps-monitor-web.tar
 tar -xvf pang-apps-monitor-web.tar
 ``` 
 ##### Step 2: Configure pang.properties file #####
