@@ -19,16 +19,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package io.prever.apps.monitor;
+package com.pangdata.apps.monitor;
 
-import io.prever.sdk.Prever;
-import io.prever.sdk.http.PreverHttp;
-import io.prever.sdk.util.PreverProperties;
-
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -38,7 +32,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
@@ -47,6 +40,10 @@ import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.pangdata.sdk.Pang;
+import com.pangdata.sdk.http.PangHttp;
+import com.pangdata.sdk.util.PangProperties;
+
 public class WebMonitor {
   private static final Logger logger = LoggerFactory.getLogger(WebMonitor.class);
   private static boolean running = true;
@@ -54,8 +51,8 @@ public class WebMonitor {
   private static String tname = null;
 
   public static void main(String[] args) throws Exception {
-    // Prever must be initialized first to use prever.properties by PreverProperties
-    final Prever prever = new PreverHttp();
+    // Pang must be initialized first to use pang.properties by PangProperties
+    final Pang pang = new PangHttp();
 
     Map<Integer, Map<String, String>> targets = extractTargets();
 
@@ -98,13 +95,13 @@ public class WebMonitor {
               Map<String, Long> data = new HashMap<String, Long>();
 
               data.put(target.get("devicename"), milliTime);
-              prever.sendData(data);
+              pang.sendData(data);
             } catch (Throwable e) {
               logger.error("Monitor has an error", e);
             }
 
             try {
-              TimeUnit.MILLISECONDS.sleep(PreverProperties.getPeriod());
+              TimeUnit.MILLISECONDS.sleep(PangProperties.getPeriod());
             } catch (InterruptedException e) {
             }
           }
@@ -141,7 +138,7 @@ public class WebMonitor {
   }
 
   private static Map<Integer, Map<String, String>> extractTargets() {
-    Properties properties = PreverProperties.getProperties();
+    Properties properties = PangProperties.getProperties();
     Set<Entry<Object, Object>> entrySet = properties.entrySet();
     Iterator<Entry<Object, Object>> iterator = entrySet.iterator();
 

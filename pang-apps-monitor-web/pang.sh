@@ -10,6 +10,6 @@ JMX="$JMX -Dcom.sun.management.jmxremote.authenticate=false"
 JMX="$JMX -Dcom.sun.management.jmxremote.ssl=false"
 
 #To enable JMX
-#nohup java $JMX -cp ./libs/*:./conf io.prever.apps.monitor.WebMonitor > /dev/null 2>&1&
+#nohup java $JMX -cp ./libs/*:./conf com.pangdata.apps.monitor.WebMonitor > /dev/null 2>&1&
 
-nohup java -cp ./libs/*:./conf io.prever.apps.monitor.WebMonitor > /dev/null 2>&1&
+nohup java -cp ./libs/*:./conf com.pangdata.apps.monitor.WebMonitor > /dev/null 2>&1&

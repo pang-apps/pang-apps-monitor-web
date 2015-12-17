@@ -13,7 +13,7 @@ eclipse {
 }
 
 ext {
-	preverVersion='1.0.0-SNAPSHOT'
+	pangdataVersion='1.0.0-SNAPSHOT'
 }
 
 configurations.all {
@@ -40,7 +40,7 @@ dependencies {
 	
 	compile 'org.apache.httpcomponents:httpclient:4.1.1'
 	
-	compile group: 'io.prever', name: 'prever-sdk-java', version: '1.0.0-SNAPSHOT'
+	compile group: 'com.pangdata', name: 'pang-sdk-java', version: '1.0.0-SNAPSHOT'
 	
 	testCompile 'junit:junit:4.11'
 }
@@ -48,6 +48,6 @@ dependencies {
 version = '1.0.0-SNAPSHOT'
 
 jar {
-    manifest.attributes provider: 'prever.io'
+    manifest.attributes provider: 'pangdata.com'
 }
 

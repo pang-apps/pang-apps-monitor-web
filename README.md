@@ -1,6 +1,6 @@
-# Monitor your web server's performance and play with Prever.io
+# Monitor your web server's performance and play with Pangdata.com
 
-Every 10 seconds monitor access your target url and send response time. Just install this application and enjoy it in Prever.io
+Every 10 seconds monitor access your target url and send response time. Just install this application and enjoy it in Pangdata.com
 You can monitor using your mobile phone or tablet any devices.
 
 ## Screen shot
@@ -12,9 +12,9 @@ You can monitor using your mobile phone or tablet any devices.
 ![Analysis](https://github.com/pang-apps/pang-apps-monitor-web/blob/master/screen-shot-2.png "Analysis")
 
 ## Getting Started
-#### Sign up for Prever.io ####
-Before you begin, you need an Prever.io account. 
-Please visit <a href="http://prever.io" target="_blank">http://prever.io</a> and create an account and retrieve your user key in user profile.
+#### Sign up for Pangdata.com ####
+Before you begin, you need an Pangdata.com account. 
+Please visit <a href="http://pangdata.io" target="_blank">http://pangdata.io</a> and create an account and retrieve your user key in user profile.
 
 #### Minimum requirements ####
 To run the application you will need **Java 1.5+**.
@@ -25,20 +25,20 @@ Very easy to install ^^.
 ##### Step 1 #####
 
 ###### Windows ######
-Download a <a href="https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.zip">Prever web server monitoring application</a> file and unzip it.
+Download a <a href="https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/pang-apps-monitor-web.zip">Pang Data web server monitoring application</a> file and unzip it.
 
 ###### Linux ######
 ``` 
-wget https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.tar
-tar -xvf prever-apps-monitor-web.tar
+wget https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/pang-apps-monitor-web.tar
+tar -xvf pang-apps-monitor-web.tar
 ``` 
-##### Step 2: Configure prever.properties file #####
-cd prever-apps-monitor-web/conf
+##### Step 2: Configure pang.properties file #####
+cd pang-apps-monitor-web/conf
 
-Confgiure your account and user key in prever.properties.
+Confgiure your account and user key in pang.properties.
 ```bash
-prever.username=your username in prever.io
-prever.userkey=your user key in prever.io
+pang.username=your username in pangdata.com
+pang.userkey=your user key in pangdata.com
 ``` 
 Declare your target url to monitor.
 ```bash
@@ -54,18 +54,18 @@ webmonitor.4.url = http://www.alibaba.com/
 webmonitor.4.url.devicename = alibaba_response_time
 ``` 
 
-Note: User key can be found in your profile of Prever.io
+Note: User key can be found in your profile of Pangdata.com
 ##### Step 3: Run #####
 ###### Windows ######
 ``` 
-prever/prever.bat
+pang-apps-monitor-web/pang.bat
 ``` 
 ###### Linux ######
 ``` 
-prever/./prever.sh
+pang-apps-monitor-web/./pang.sh
 ``` 
 ##### Step 4: Access your devices #####
-Register your device in Prever.io
+Register your device in Pangdata.com
 
 Login your account.
 See main dashborad and you can find unregistered device.
