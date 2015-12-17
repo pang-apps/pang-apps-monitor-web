@@ -5,11 +5,11 @@ You can monitor using your mobile phone or tablet any devices.
 
 ## Screen shot
 ###### Realtime monitoring ######
-![Realtime monitoring](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot.png "Realtime monitoring")
-![Realtime monitoring](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot-3.png "Realtime monitoring")
+![Realtime monitoring](https://github.com/pang-apps/pang-apps-monitor-web/blob/master/screen-shot.png "Realtime monitoring")
+![Realtime monitoring](https://github.com/pang-apps/pang-apps-monitor-web/blob/master/screen-shot-3.png "Realtime monitoring")
 
 ###### Analysis ######
-![Analysis](https://github.com/prever-apps/prever-apps-monitor-web/blob/master/screen-shot-2.png "Analysis")
+![Analysis](https://github.com/pang-apps/pang-apps-monitor-web/blob/master/screen-shot-2.png "Analysis")
 
 ## Getting Started
 #### Sign up for Prever.io ####
@@ -25,11 +25,11 @@ Very easy to install ^^.
 ##### Step 1 #####
 
 ###### Windows ######
-Download a <a href="https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.zip">Prever web server monitoring application</a> file and unzip it.
+Download a <a href="https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.zip">Prever web server monitoring application</a> file and unzip it.
 
 ###### Linux ######
 ``` 
-wget https://github.com/prever-apps/prever-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.tar
+wget https://github.com/pang-apps/pang-apps-monitor-web/releases/download/1.0.2/prever-apps-monitor-web.tar
 tar -xvf prever-apps-monitor-web.tar
 ``` 
 ##### Step 2: Configure prever.properties file #####
