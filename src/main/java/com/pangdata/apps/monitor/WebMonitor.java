@@ -56,6 +56,10 @@ public class WebMonitor {
 
     Map<Integer, Map<String, String>> targets = extractTargets();
 
+    if(targets.size() == 0) {
+      logger.error("No target web server found");
+      return;
+    }
     final ExecutorService threadPools = Executors.newFixedThreadPool(targets.size(), new ThreadFactory() {
       
       public Thread newThread(final Runnable r) {
@@ -96,7 +100,7 @@ public class WebMonitor {
 
               data.put(target.get("devicename"), milliTime);
               pang.sendData(data);
-            } catch (Throwable e) {
+            } catch (Throwable e) { 
               logger.error("Monitor has an error", e);
             }
 
