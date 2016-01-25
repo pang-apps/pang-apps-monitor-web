@@ -37,12 +37,23 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
+import javax.net.ssl.HttpsURLConnection;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.pangdata.sdk.Pang;
 import com.pangdata.sdk.http.PangHttp;
 import com.pangdata.sdk.util.PangProperties;
+import com.pangdata.sdk.util.SdkUtils;
 
 public class WebMonitor {
   private static final Logger logger = LoggerFactory.getLogger(WebMonitor.class);
@@ -53,7 +64,7 @@ public class WebMonitor {
   public static void main(String[] args) throws Exception {
     // Pang must be initialized first to use pang.properties by PangProperties
     final Pang pang = new PangHttp();
-
+    
     Map<Integer, Map<String, String>> targets = extractTargets();
 
     if(targets.size() == 0) {
@@ -110,12 +121,45 @@ public class WebMonitor {
             }
           }
         }
+        
 
-        private void getResponse(String targetUrl) throws MalformedURLException, IOException {
+        private void getResponse(String targetUrl) throws Exception {
+
+          HttpParams myParams = new BasicHttpParams();
+          HttpConnectionParams.setSoTimeout(myParams, 10000);
+          HttpConnectionParams.setConnectionTimeout(myParams, 10000); // Timeout
+          
+          DefaultHttpClient httpClient = SdkUtils.createHttpClient(targetUrl);
+          HttpGet get = new HttpGet(targetUrl);
+          HttpResponse response = httpClient.execute(get);
+          HttpEntity entity = response.getEntity();
+          InputStream in = entity.getContent();
+          
+          try {
+            byte[] buffer = new byte[1024];
+            int read = 0;
+            while ((read = in.read(buffer, 0, buffer.length)) != -1) {}
+          } finally {
+            if (in != null) {
+              in.close();
+            }
+          }
+        }
+        
+/*        private void getResponse(String targetUrl) throws MalformedURLException, IOException {
+
           URL url = new URL(targetUrl);
-          URLConnection conn = url.openConnection();
+          
+          URLConnection conn = null;
+          
+          if(targetUrl.startsWith("https")) {
+            conn = (HttpsURLConnection)url.openConnection();
+          } else {
+            conn = url.openConnection();
+          }
           conn.setConnectTimeout(TIMEOUT_VALUE);
           conn.setReadTimeout(TIMEOUT_VALUE);
+          
           InputStream in = conn.getInputStream();
 
           try {
@@ -127,7 +171,7 @@ public class WebMonitor {
               in.close();
             }
           }
-        }
+        }*/
 
       });
 
