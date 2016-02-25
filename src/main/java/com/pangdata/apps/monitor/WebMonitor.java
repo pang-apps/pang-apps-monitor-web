@@ -21,11 +21,7 @@
 
 package com.pangdata.apps.monitor;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -37,8 +33,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 
-import javax.net.ssl.HttpsURLConnection;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -46,12 +40,11 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.pangdata.sdk.Pang;
-import com.pangdata.sdk.http.PangHttp;
+import com.pangdata.sdk.mqtt.PangMqtt;
 import com.pangdata.sdk.util.PangProperties;
 import com.pangdata.sdk.util.SdkUtils;
 
@@ -63,7 +56,7 @@ public class WebMonitor {
 
   public static void main(String[] args) throws Exception {
     // Pang must be initialized first to use pang.properties by PangProperties
-    final Pang pang = new PangHttp();
+    final Pang pang = new PangMqtt();
     
     Map<Integer, Map<String, String>> targets = extractTargets();
 
