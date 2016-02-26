@@ -13,7 +13,7 @@ eclipse {
 }
 
 ext {
-	pangdataVersion='1.0.0-SNAPSHOT'
+	pangdataVersion='1.0.0-RELEASE'
 }
 
 configurations.all {
@@ -24,7 +24,7 @@ repositories {
    mavenLocal()
    mavenCentral()
    maven{
-   	url "http://mini.prever.co.kr:8081/nexus/content/groups/prever-io-public-repository/"
+   	url "http://mini.prever.io:8081/nexus/content/groups/prever-io-public-repository/"
    }
 }
 
@@ -40,12 +40,12 @@ dependencies {
 	
 	compile 'org.apache.httpcomponents:httpclient:4.1.1'
 	
-	compile group: 'com.pangdata', name: 'pang-sdk-java', version: '1.0.0-SNAPSHOT'
+	compile group: 'com.pangdata', name: 'pang-sdk-java', version: '1.0.0-RELEASE'
 	
 	testCompile 'junit:junit:4.11'
 }
 
-version = '1.0.0-SNAPSHOT'
+version = '1.0.0-RELEASE'
 
 jar {
     manifest.attributes provider: 'pangdata.com'

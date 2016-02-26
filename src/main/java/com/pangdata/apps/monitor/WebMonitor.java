@@ -103,6 +103,7 @@ public class WebMonitor {
               Map<String, Long> data = new HashMap<String, Long>();
 
               data.put(target.get("devicename"), milliTime);
+              logger.debug("Response time: {}", data.toString());
               pang.sendData(data);
             } catch (Throwable e) { 
               logger.error("Monitor has an error", e);
