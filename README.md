@@ -65,11 +65,10 @@ pang-apps-monitor-web/pang.bat
 pang-apps-monitor-web/./pang.sh
 ``` 
 ##### Step 4: Access your devices #####
-Register your device in Pangdata.com
+See your device in Pangdata.com
 
-Login your account.
-See main dashborad and you can find unregistered device.
-Register the unregistered device.
+Login your account. See main dashborad(Overview) and you can find registered device.
+Create your own dashboard and your data will play in realtime.
 
 ##### Step 5: You are happy to play with your data #####
 Wow!! all done. Enjoy and play with your device and your data.
